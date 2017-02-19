@@ -29,7 +29,7 @@ app.get('/MRBRICOLAGE/ABCDEF', function (req, res) {
     res.end();
 })
 
-app.get('/CARREFOUR/ABCDEF', function (req, res) {
+app.get('/FLUNCH/ABCDEF', function (req, res) {
 //    res.end('Hi there!')
     res.writeHead(301,
         {Location: 'http://restaurant.flunch.fr/lille/flunch-lille-gare/?store=107&origin=50.62925%2C3.057256&cz_open=true'}
