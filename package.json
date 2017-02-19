@@ -9,6 +9,6 @@
     "nib": "^1.0.4"
   },
   "scripts": {
-    "start": "npm start"
+    "start": "node app.js"
   }
 }
