@@ -1,7 +1,9 @@
 /*
  * Module dependencies
  */
+
 var express = require('express')
+    , fs = require('fs')
     , stylus = require('stylus')
     , nib = require('nib')
 
@@ -22,15 +24,26 @@ app.use(stylus.middleware(
 app.use(express.static(__dirname + '/public'))
 
 app.get('/MRBRICOLAGE/ABCDEF', function (req, res) {
-//    res.end('Hi there!')
     res.writeHead(301,
         {Location: 'http://www.mr-bricolage.fr/?magasin=Lillers&cz_open=true'}
     );
     res.end();
 })
 
+app.get('/apple-app-site-association', function (req, res){
+    fs.readFile("./apple-app-site-association", function(error, content) {
+        if (error) {
+           console.log("Fuck ! it's an error ...");
+        }
+        else {
+            console.log("Fuck yeah !");
+            // res.writeHead(200, { 'Content-Type': "application/pkcs7-mime" });
+            res.end(content, 'utf-8');
+        }
+    });
+});
+
 app.get('/FLUNCH/ABCDEF', function (req, res) {
-//    res.end('Hi there!')
     res.writeHead(301,
         {Location: 'http://restaurant.flunch.fr/lille/flunch-lille-gare/?store=107&origin=50.62925%2C3.057256&cz_open=true'}
     );
