@@ -3,9 +3,17 @@
 		"apps": [],
 		"details": [
 			{
-				"appID": "RVYNC7UMEC.com.critizr.DeepLinkTest",
-				"paths": ["*"]
-			}
+				"appID": "RVYNC7UMEC.com.critizr.test.DeepLinkTestMrBricolage",
+				"paths": ["/MRBRICOLAGE/*"]
+			},
+			{
+            	"appID": "RVYNC7UMEC.com.critizr.test.DeepLinkTestFlunch",
+            	"paths": ["/FLUNCH/*"]
+            },
+            {
+            	"appID": "RVYNC7UMEC.com.critizr.DeepLinkTest",
+            	"paths": ["/CRITIZR/*"]
+            }
 		]
 	}
 }

@@ -27,17 +27,10 @@ app.get('/', function (req, res){
     res.send('Hello there !');
 })
 
-app.get('/MRBRICOLAGE/ABCDEF', function (req, res) {
-    res.writeHead(301,
-        {Location: 'http://www.mr-bricolage.fr/?magasin=Lillers&cz_open=true'}
-    );
-    res.end();
-})
-
 app.get('/apple-app-site-association', function (req, res){
     fs.readFile("./apple-app-site-association", function(error, content) {
         if (error) {
-           console.log("Fuck ! it's an error ...");
+            console.log("Fuck ! it's an error ...");
         }
         else {
             console.log("Fuck yeah !");
@@ -46,6 +39,13 @@ app.get('/apple-app-site-association', function (req, res){
         }
     });
 });
+
+app.get('/MRBRICOLAGE/ABCDEF', function (req, res) {
+    res.writeHead(301,
+        {Location: 'http://www.mr-bricolage.fr/?magasin=Lillers&cz_open=true'}
+    );
+    res.end();
+})
 
 app.get('/FLUNCH/ABCDEF', function (req, res) {
     res.writeHead(301,
