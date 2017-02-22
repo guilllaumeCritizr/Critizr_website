@@ -37,7 +37,7 @@ app.get('/apple-app-site-association', function (req, res){
         }
         else {
             console.log("Fuck yeah !");
-            // res.writeHead(200, { 'Content-Type': "application/pkcs7-mime" });
+            res.writeHead(200, { 'Content-Type': "application/pkcs7-mime" });
             res.end(content, 'utf-8');
         }
     });
