@@ -29,28 +29,26 @@ app.get('/', function (req, res){
 
 app.get('/apple-app-site-association', function (req, res){
     fs.readFile("./apple-app-site-association", function(error, content) {
-        if (error) {
-            console.log("Fuck ! it's an error ...");
-        }
-        else {
-            console.log("Fuck yeah !");
-            res.writeHead(200, { 'Content-Type': "application/pkcs7-mime" });
-            res.end(content, 'utf-8');
-        }
+        res.writeHead(200, { 'Content-Type': "application/pkcs7-mime" });
+        res.end(content, 'utf-8');
     });
 });
 
 app.get('/MRBRICOLAGE/ABCDEF', function (req, res) {
-    res.writeHead(301,
-        {Location: 'http://www.mr-bricolage.fr/?magasin=Lillers&cz_open=true'}
-    );
-    res.end();
+    res.writeHead(200, { 'Content-Type': "application/json" });
+    obj = {
+        'short': '/MRBRICOLAGE/ABCDEF',
+        'long': 'http://www.mr-bricolage.fr/?magasin=Lillers&cz_open=true'
+    }
+    res.end(obj, 'utf-8');
 })
 
 app.get('/FLUNCH/ABCDEF', function (req, res) {
-    res.writeHead(301,
-        {Location: 'http://restaurant.flunch.fr/lille/flunch-lille-gare/?store=107&origin=50.62925%2C3.057256&cz_open=true'}
-    );
-    res.end();
+    res.writeHead(200, { 'Content-Type': "application/json" });
+    obj = {
+        'short': '/MRBRICOLAGE/ABCDEF',
+        'long': 'http://restaurant.flunch.fr/lille/flunch-lille-gare/?store=107&origin=50.62925%2C3.057256&cz_open=true'
+    }
+    res.end(obj, 'utf-8');
 })
 app.listen(process.env.PORT || 3000)
