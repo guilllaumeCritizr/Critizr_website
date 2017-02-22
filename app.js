@@ -40,7 +40,7 @@ app.get('/MRBRICOLAGE/ABCDEF', function (req, res) {
         'short': '/MRBRICOLAGE/ABCDEF',
         'long': 'http://www.mr-bricolage.fr/?magasin=Lillers&cz_open=true'
     }
-    res.end(obj, 'utf-8');
+    res.end(JSON.stringify(obj));
 })
 
 app.get('/FLUNCH/ABCDEF', function (req, res) {
@@ -49,6 +49,6 @@ app.get('/FLUNCH/ABCDEF', function (req, res) {
         'short': '/MRBRICOLAGE/ABCDEF',
         'long': 'http://restaurant.flunch.fr/lille/flunch-lille-gare/?store=107&origin=50.62925%2C3.057256&cz_open=true'
     }
-    res.end(obj, 'utf-8');
+    res.end(JSON.stringify(obj));
 })
 app.listen(process.env.PORT || 3000)
