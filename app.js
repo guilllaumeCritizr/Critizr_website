@@ -23,6 +23,11 @@ app.use(stylus.middleware(
 ))
 app.use(express.static(__dirname + '/public'))
 
+app.get('/', function (req, res){
+    res.writeHead(200, {});
+    res.end();
+})
+
 app.get('/MRBRICOLAGE/ABCDEF', function (req, res) {
     res.writeHead(301,
         {Location: 'http://www.mr-bricolage.fr/?magasin=Lillers&cz_open=true'}
