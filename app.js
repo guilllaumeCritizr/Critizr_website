@@ -24,8 +24,7 @@ app.use(stylus.middleware(
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', function (req, res){
-    res.writeHead(200, {});
-    res.end();
+    res.send('Hello there !');
 })
 
 app.get('/MRBRICOLAGE/ABCDEF', function (req, res) {
