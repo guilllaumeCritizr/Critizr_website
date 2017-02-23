@@ -40,7 +40,7 @@ app.get('/MRBRICOLAGE/ABCDEF', function (req, res) {
         'short': '/MRBRICOLAGE/ABCDEF',
         'storeId': 'S944',
         'params': {
-            'cz_mode': 'feedback',
+            'cz_mode': 'feedback'
         }
     };
     res.end(JSON.stringify(obj));
