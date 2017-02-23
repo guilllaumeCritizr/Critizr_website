@@ -12,7 +12,7 @@
             },
             {
             	"appID": "RVYNC7UMEC.com.critizr.DeepLinkTest",
-            	"paths": ["*"]
+            	"paths": ["/FLUNCH/*", "/MRBRICOLAGE/*"]
             }
 		]
 	}
