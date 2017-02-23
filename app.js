@@ -41,7 +41,6 @@ app.get('/MRBRICOLAGE/ABCDEF', function (req, res) {
         'storeId': 'S944',
         'params': {
             'cz_mode': 'feedback',
-            'cz_open': 'true'
         }
     };
     res.end(JSON.stringify(obj));
@@ -53,10 +52,10 @@ app.get('/FLUNCH/ABCDEF', function (req, res) {
         'short': '/FLUNCH/ABCDEF',
         'storeId': '107',
         'params': {
-            'cz_open': 'true',
             'mode': 'quiz'
         }
     };
     res.end(JSON.stringify(obj));
 });
+
 app.listen(process.env.PORT || 3000);
