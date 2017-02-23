@@ -38,9 +38,9 @@ app.get('/MRBRICOLAGE/ABCDEF', function (req, res) {
     res.writeHead(200, { 'Content-Type': "application/json" });
     obj = {
         'short': '/MRBRICOLAGE/ABCDEF',
-        'storeId': '107',
+        'storeId': 'S944',
         'params': {
-            'cz_mode': 'quiz',
+            'cz_mode': 'feedback',
             'cz_open': 'true'
         }
     };
