@@ -1,3 +1,7 @@
+/**
+ * Created by guillaumeboufflers on 27/02/2017.
+ */
+
 var apn = require('apn');
 
 var apnProvider = new apn.Provider({
