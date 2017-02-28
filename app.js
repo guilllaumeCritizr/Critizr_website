@@ -34,6 +34,13 @@ app.get('/apple-app-site-association', function (req, res){
     });
 });
 
+app.get('/.well-known/assetlinks.json', function (req, res){
+    fs.readFile("./assetlinks.json", function(error, content) {
+        res.writeHead(200, { 'Content-Type': "application/json" });
+        res.end(content, 'utf-8');
+    });
+});
+
 app.get('/MRBRICOLAGE/ABCDEF', function (req, res) {
     res.writeHead(200, { 'Content-Type': "application/json" });
     obj = {

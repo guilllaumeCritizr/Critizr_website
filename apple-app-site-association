@@ -6,6 +6,10 @@
 				"appID": "RVYNC7UMEC.com.critizr.test.DeepLinkTestMrBricolage",
 				"paths": ["/MRBRICOLAGE/*"]
 			},
+						{
+            				"appID": "RVYNC7UM.com.critizr.test.DeepLinkTestMrBricolage",
+            				"paths": ["/CARROUF/*"]
+            			},
 			{
             	"appID": "RVYNC7UMEC.com.critizr.test.DeepLinkTestFlunch",
             	"paths": ["/FLUNCH/*"]
